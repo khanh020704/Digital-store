@@ -1,59 +1,291 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+                                        Digital Store
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Digital Store is a Laravel-based e-commerce website developed as a web application project.
 
-## About Laravel
+The website allows users to browse products, search and filter products, manage a shopping cart, and complete the checkout process. It also includes a member area for product management and an admin area for managing categories, brands, countries, users, and blog content.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ + Customer
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Register and log in
 
-## Learning Laravel
+Update personal information
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Browse products
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Search for products
 
-## Laravel Sponsors
+Filter products by price
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+View product details
 
-### Premium Partners
+Add products to the shopping cart
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Update or remove cart items
 
-## Contributing
+Checkout products
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Receive checkout confirmation by email
 
-## Code of Conduct
+Read blog posts
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Rate and comment on blog posts
 
-## Security Vulnerabilities
+ + Member
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Members can manage their own products through the member area:
 
-## License
+Add products
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Edit products
+
+Delete products
+
+View their product list
+
+Manage the shopping cart
+
+Update profile information
+
+ + Admin
+
+The admin area provides management functions for:
+
+Dashboard
+
+Users
+
+Countries
+
+Categories
+
+Brands
+
+Blog posts
+
+ + Technologies
+
+PHP 8.2+
+
+Laravel 12
+
+MySQL
+
+Blade
+
+Bootstrap 5
+
+Tailwind CSS
+
+Vite
+
+Sass
+
+Axios
+
+Intervention Image
+
+- Project Structure
+
+Digital-store/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/
+│   │   │   └── User/
+│   │   └── Requests/
+│   ├── Mail/
+│   └── Models/
+├── database/
+│   └── migrations/
+├── public/
+│   ├── admin/
+│   ├── frontend/
+│   └── upload/
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+├── routes/
+│   └── web.php
+├── .env.example
+├── artisan
+├── composer.json
+└── package.json
+
+- Requirements
+
+Before running the project, make sure the following are installed:
+
+PHP >= 8.2
+
+Composer
+
+Node.js and npm
+
+MySQL
+
+A local development environment such as XAMPP
+
+- Installation
+
+ + Clone the repository:
+
+git clone https://github.com/khanh020704/Digital-store.git
+cd Digital-store
+
+ + Install PHP dependencies:
+
+composer install
+
+Install frontend dependencies:
+
+npm install
+
+ + Create the environment file:
+
+cp .env.example .env
+
+On Windows, you can also copy .env.example manually and rename it to .env.
+
+Generate the application key:
+
+php artisan key:generate
+
+- Database Configuration
+
+Create a MySQL database and update the database settings in .env:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
+
+ + Then run the migrations:
+
+php artisan migrate
+
+- Email Configuration
+
+The checkout process sends a confirmation email to the logged-in user's email address.
+
+Configure the mail settings in .env according to the mail service you use.
+
+Example:
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_app_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=your_email@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+For Gmail, use an App Password instead of the normal account password.
+
+- Running the Project
+
+Start the Laravel development server:
+
+php artisan serve
+
+In another terminal, start Vite:
+
+npm run dev
+
+The application will normally be available at:
+
+http://127.0.0.1:8000
+
+- Checkout
+
+The current checkout flow uses the shopping cart stored in the session.
+
+When the user checks out, the application:
+
+Gets the current cart.
+
+Calculates the product subtotal.
+
+Calculates a 2% eco tax.
+
+Calculates the final total.
+
+Sends a confirmation email.
+
+Clears the cart after the checkout is completed.
+
+The current implementation does not include an online payment gateway.
+
+- Search and Product Management
+
+Products can be searched through the main search function and filtered by price.
+
+Product information includes:
+
+Product name
+
+Price
+
+Category
+
+Brand
+
+Company
+
+Sale status
+
+Product image
+
+Product details
+
+Members can manage products from their account.
+
+- Blog
+
+The website includes a blog section where users can:
+
+View blog posts
+
+View individual posts
+
+Rate posts
+
+Leave comments
+
+Administrators can create, edit, and delete blog posts.
+
+- Testing
+
+Run the Laravel test suite with:
+
+php artisan test
+
+- Development
+
+For development, Laravel and Vite can be run separately:
+
+php artisan serve
+npm run dev
+
+The project also includes the Laravel development script defined in composer.json.
+
+- Notes
+
+Do not commit the .env file.
+
+Make sure the database configuration is correct before running migrations.
+
+Mail configuration is required if you want to test the checkout email feature.
+
+Uploaded files are stored under the project's public upload directories.
+
+- Author
+
+Ho Ngoc Dang Khanh
+
+GitHub: https://github.com/khanh020704
