@@ -6,20 +6,42 @@ A Laravel-based e-commerce website for browsing products, managing a shopping ca
 
 ## 📌 Features
 
-### Customer
-- Register and log in accounts
-- Update personal information
-- Browse, search, and filter products by price
-- View product details, manage shopping cart, and checkout
-- Receive checkout confirmation via email
-- Read, rate, and comment on blog posts
+### 👤 Customer
+- **Authentication & Profile:** Register, log in, and update personal account information.
+- **Product Navigation:**
+  - Browse product list with pagination.
+  - Search products by keywords.
+  - Filter products by price range.
+  - View detailed product information (Name, Price, Category, Brand, Company, Sale status, Images, and Descriptions).
+- **Shopping Cart & Checkout:**
+  - Add products to cart, update quantities, or remove items.
+  - Session-based shopping cart handling.
+  - Checkout flow calculating subtotal, 2% eco tax, and grand total.
+  - Automatic email confirmation sent upon successful checkout.
+- **Blog & Interaction:**
+  - Read blog posts and view individual post details.
+  - Rate blog posts.
+  - Leave comments on blog posts.
 
-### Member
-- Add, edit, delete, and view personal product list
-- Manage shopping cart and update profile information
+### 🧑‍💻 Member Area
+Members have dedicated account access to manage their own store items:
+- **Product Management:**
+  - Add new products (including Name, Price, Category, Brand, Company, Sale/New status, single/multiple Images, Details).
+  - Edit existing product information, prices, and images.
+  - Delete products from personal listings.
+  - View personal product list.
+- **Account & Orders:**
+  - Manage active shopping cart items.
+  - Update personal profile details.
 
-### Admin
-- Manage Dashboard, Users, Countries, Categories, Brands, and Blog posts
+### 🛡️ Admin Area
+Full administrative control over system data and content:
+- **Dashboard:** Overview of store operations and statistics.
+- **User Management:** View, manage, edit, and update member accounts.
+- **Countries Management:** Create, edit, and delete countries (for shipping/billing).
+- **Category Management:** Full CRUD operations for product categories.
+- **Brand Management:** Full CRUD operations for product brands.
+- **Blog Management:** Create, edit, update, and delete blog posts.
 
 ---
 
@@ -27,8 +49,8 @@ A Laravel-based e-commerce website for browsing products, managing a shopping ca
 
 - **Backend:** PHP 8.2+, Laravel 12
 - **Database:** MySQL
-- **Frontend:** Blade, Bootstrap 5, Tailwind CSS 4, Vite, Sass, Axios
-- **Package:** Intervention Image
+- **Frontend:** Blade Template Engine, Bootstrap 5, Tailwind CSS 4, Vite, Sass, Axios
+- **Image Processing:** Intervention Image
 
 ---
 
